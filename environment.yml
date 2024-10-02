@@ -1,0 +1,23 @@
+name: sarcasm_nlp
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - nltk
+  - scikit-learn
+  - pandas
+  - numpy
+  - matplotlib
+  - jupyter
+  - pytorch
+  - pip 
+  - pip:
+      - transformers
+      - accelerate
+      - datasets
+      - evaluate
+      - rouge-score
+      - sacrebleu
+      - unbabel-comet
+      - sentencepiece
