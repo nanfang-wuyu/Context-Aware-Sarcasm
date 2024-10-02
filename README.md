@@ -20,11 +20,15 @@ GPT4o-mini-data (2314 pairs)
 One inference in test set of iSarcasm is:
 
 > src: @MarkHendyHR Only joking... keep it real. HR professionals have a life too... 🤔 
+> 
 > translation: I don't think HR professionals have a life. 
+> 
 > ground_truth: Only joking. Keep it real. HR professionals don't have a life. 
 
 One inference in GPT4o-mini-data is:
 
 > src: Look at you, finishing all your snacks before dinner. What a healthy choice! 
+> 
 > translation: I would say that eating snacks before dinner is not healthy. 
+> 
 > ground_truth: Eating snacks before dinner is not a good decision for your health.
