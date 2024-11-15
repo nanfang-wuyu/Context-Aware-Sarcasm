@@ -1,6 +1,8 @@
 # Context-Aware-Sarcasm
 > Project of Essentials in Text and Speech Processing
 
+This is the code repository for our project. This project focuses on developing a system to address sarcasm by detecting and interpreting sarcastic comments in a clear and straightforward manner. Sarcasm detection identifies comments containing sarcasm, while sarcasm interpretation rewrites them to preserve the intended meaning in an unambiguous way.
+
 ## Start
 
 To install environment, run 
@@ -10,25 +12,19 @@ To activate the environment, run
 `conda activate sarcasm_nlp`
 
 ## Dataset
-iSarcasm()[linktobeadded] (866 pairs)
-GPT4o-mini-data (2314 pairs)
+[iSarcasm](https://www.kaggle.com/datasets/tegzes/isarcasm?select=isarcasm2022.csv):
+A collection of tweets, labelled as either sarcastic or non\_sarcastic. There are 866 sarcastic pairs with notations.  
+GPT-4o-data (augmented dataset using GPT-4o, 2314 pairs):
+An augmented dataset generated using APIs from famous language model GPT-4o, with size mini. All generated pairs are sarcastic. 
 
 ## Case analysis
+Interpretation for sarcastic statement: 
 
-### Model fine-tuned on FLAN-t5, 10 epochs with iSarcasm 
+**Source**: love when the train stops in philly and everybody boards and of a sudden it smells like a ham sandwich.
 
-One inference in test set of iSarcasm is:
+**Model Output**: I hate when the train stops in Philadelphia and everybody boards and of a sudden it smells.
 
-> src: @MarkHendyHR Only joking... keep it real. HR professionals have a life too... 🤔 
-> 
-> translation: I don't think HR professionals have a life. 
-> 
-> ground_truth: Only joking. Keep it real. HR professionals don't have a life. 
+**Ground Truth**: i'm disappointed but not surprised that my train stopped in philly and everybody got on and suddenly it smelled like ham sandwich. 
 
-One inference in GPT4o-mini-data is:
+Results for Non-sarcastic statement would be Non-Sarcastic. 
 
-> src: Look at you, finishing all your snacks before dinner. What a healthy choice! 
-> 
-> translation: I would say that eating snacks before dinner is not healthy. 
-> 
-> ground_truth: Eating snacks before dinner is not a good decision for your health.
